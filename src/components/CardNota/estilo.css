@@ -8,7 +8,7 @@
   flex-wrap: wrap;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
   padding: 16px;
- 
+  position: relative;
 }
 .card-nota_cabecalho {
   font-size: 1.1em;
@@ -27,4 +27,10 @@
 .card-nota_titulo {
   font-size: 1.2em;
   margin-right: 12px;
+}
+
+.delete-svg{
+  position: absolute;
+  top: 5px;
+  right: 5px;
 }
