@@ -22,11 +22,20 @@ class App extends Component {
     this.setState(novoEstado)
   }
 
+  deletarCard(index){
+    let arrayNotas = this.state.notas;
+    arrayNotas.splice(index,1);
+    console.log(arrayNotas);
+    this.setState({notas:arrayNotas});
+  }
+
   render() {
     return (
       <section className="conteudo">
         <FormularioCadastro criarNota={this.criarNota.bind(this)}/>
-        <ListaDeNotas notas={this.state.notas}/>
+        <ListaDeNotas 
+        deleteCard={this.deletarCard.bind(this)} 
+        notas={this.state.notas}/>
       </section>
     );
   }
